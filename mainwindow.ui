@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="font">
+    <font>
+     <family>Lucida Sans</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <widget class="QWidget" name="w_Header" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1200</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 0);</string>
+    </property>
+    <widget class="QLabel" name="lblTitle">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>0</y>
+       <width>520</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Sans</family>
+       <pointsize>32</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Server Monitoring Tool</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="w_Footer" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>840</y>
+      <width>1200</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 0);</string>
+    </property>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>20</y>
+       <width>220</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Sans</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Copyright © All Rights Reserved</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>80</y>
+      <width>1200</width>
+      <height>760</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="lblTemp">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>170</y>
+       <width>130</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Sans</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Temperature</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblUmid">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>300</y>
+       <width>130</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Sans</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Umidity</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblPress">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>420</y>
+       <width>130</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Sans</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Pressure</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblDist">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>540</y>
+       <width>130</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Sans</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Distance</string>
+     </property>
+    </widget>
+    <widget class="QDial" name="dialTemp">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>150</y>
+       <width>70</width>
+       <height>90</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDial" name="dialUmid">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>280</y>
+       <width>70</width>
+       <height>90</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDial" name="dialPress">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>400</y>
+       <width>70</width>
+       <height>90</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDial" name="dialDist">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>530</y>
+       <width>70</width>
+       <height>90</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="lcdTemp">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>170</y>
+       <width>190</width>
+       <height>40</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="lcdUmid">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>300</y>
+       <width>190</width>
+       <height>40</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="lcdPress">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>420</y>
+       <width>190</width>
+       <height>40</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="lcdDist">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>550</y>
+       <width>190</width>
+       <height>40</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="Line" name="line">
+     <property name="geometry">
+      <rect>
+       <x>595</x>
+       <y>30</y>
+       <width>10</width>
+       <height>700</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblMotor">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>110</y>
+       <width>251</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Sans</family>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Servo-Motor Direction</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="sliderMotor">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>220</y>
+       <width>241</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>3</number>
+     </property>
+     <property name="pageStep">
+      <number>1</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="tickPosition">
+      <enum>QSlider::TicksAbove</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblLed">
+     <property name="geometry">
+      <rect>
+       <x>830</x>
+       <y>310</y>
+       <width>211</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Sans</family>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>LED Control</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblColors">
+     <property name="geometry">
+      <rect>
+       <x>860</x>
+       <y>380</y>
+       <width>101</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Sans</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Colors</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="chkRed">
+     <property name="geometry">
+      <rect>
+       <x>750</x>
+       <y>480</y>
+       <width>70</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Sans</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Red</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="chkGreen">
+     <property name="geometry">
+      <rect>
+       <x>870</x>
+       <y>480</y>
+       <width>70</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Sans</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Green</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="chkBlue">
+     <property name="geometry">
+      <rect>
+       <x>1000</x>
+       <y>480</y>
+       <width>70</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Sans</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Blue</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblDirection">
+     <property name="geometry">
+      <rect>
+       <x>860</x>
+       <y>530</y>
+       <width>101</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Sans</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Direction</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="rdLeftToRight">
+     <property name="geometry">
+      <rect>
+       <x>760</x>
+       <y>620</y>
+       <width>91</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Sans</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Left to Right</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="rdRightToLeft">
+     <property name="geometry">
+      <rect>
+       <x>950</x>
+       <y>620</y>
+       <width>101</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Sans</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Right to Left</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblMonitoring">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>20</y>
+       <width>180</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Sans</family>
+       <pointsize>22</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Monitoring</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblControl">
+     <property name="geometry">
+      <rect>
+       <x>830</x>
+       <y>20</y>
+       <width>130</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Sans</family>
+       <pointsize>22</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Control</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
