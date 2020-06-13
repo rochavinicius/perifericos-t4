@@ -1,4 +1,5 @@
-QT       += core gui
+QT       += core gui network
+RESOURCES += ./wifi-icon.png
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
