@@ -51,13 +51,16 @@ void MainWindow::NewConnection()
     connect(socket,&QTcpSocket::stateChanged, this, [&](QTcpSocket::SocketState state)
     {
         if (state == QTcpSocket::ConnectedState)
+        {
             clientConnected = true;
+            SendControlValues();
+        }
         else if (clientConnected && state != QTcpSocket::ConnectedState)
         {
             clientConnected = false;
-            UpdateStatus();
             socket->close();
         }
+        UpdateStatus();
     });
 
     clientConnected = true;
@@ -76,10 +79,12 @@ void MainWindow::SendControlValues()
      * update struct with new values from UI
      */
     sprintf((char*)&cv.servoDirection, "%d", ui->sliderMotor->value());
+
     if (ui->rdLeftToRight->isChecked())
         strcpy((char*)&cv.LEDDirection, "0");
     else
         strcpy((char*)&cv.LEDDirection, "1");
+
     if (ui->rdRed->isChecked())
         strcpy((char*)&cv.LEDColor, "0");
     else if (ui->rdGreen->isChecked())
@@ -130,4 +135,3 @@ void MainWindow::UpdateStatus()
         ui->lblStatus->setStyleSheet("color: red;");
     }
 }
-
